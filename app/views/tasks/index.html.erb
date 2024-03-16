@@ -1,0 +1,18 @@
+<h1> All Tasks </h1>
+<a href="/">Home</a>
+<br>
+
+<% @tasks.each do |task| %>
+    <div>
+        <h3><a href="/tasks/<%= task.id %>"><%= task.title %></a></h3>
+        <p> <%= task.description %> </p>
+        <form action="/tasks/<%= task.id %>" method="POST">
+            <button><a href="/tasks/<%= task.id  %>/edit">Edit</a></button>
+            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+            <input type="hidden" name="_method" value="DELETE">
+            <input type="submit" value="Delete"/>
+        </form>
+    </div>
+<% end %>
+
+

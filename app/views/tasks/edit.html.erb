@@ -1,0 +1,14 @@
+<h1> Edit Task </h1>
+<a href="/">Home</a>
+<br>
+
+<form action="/tasks/<%= @task.id %>" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <input type="hidden" name="_method" value="PATCH" />
+    <p>Edit</p>
+    <input type='text' name='title' value="<%= @task.title %>"/><br/>
+    <textarea name='description'><%= @task.description %></textarea><br/>
+    <input type='submit'/>
+</form>
+
+<a href="/">Home</a>
