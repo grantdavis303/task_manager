@@ -1,24 +1,14 @@
-# README
+# Task Manager
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### There is currently no live deployment of this application.
 
-Things you may want to cover:
+To set up this code locally, run the following commands in your terminal:
 
-* Ruby version
+```
+$ bundle install
+$ rails db:{drop,create,migrate,seed}
+$ rails s
+```
+This will install any missing gems, create a new database, create a few default tasks (to see the functionality right away), as well as run a local server.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Once the server is live, navigate to [LocalHost:3000](http://localhost:3000/).
