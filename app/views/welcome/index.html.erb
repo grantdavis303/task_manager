@@ -2,7 +2,7 @@
 
 <section class="welcome_navigation_menu">
   <ul>
-    <li><a href="/tasks"> Task Index </a></li>
-    <li><a href="/tasks/new"> Create a New Task </a></li>
+    <li> <%= link_to "Task Index", tasks_path, method: :get %> </li>
+    <li> <%= link_to "Create a New Task", new_task_path, method: :get %> </li>
   </ul>
 </section>
