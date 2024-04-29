@@ -4,7 +4,7 @@ class TasksController < ApplicationController
   end
 
   def create
-    task = Task.create!({
+    @task = Task.create!({
       title: params[:title],
       description: params[:description]
     })
@@ -24,14 +24,20 @@ class TasksController < ApplicationController
   end
 
   def update
-    task = Task.find(params[:id])
-    task.update({
+    @task = Task.find(params[:id])
+    @task.update({
       title: params[:title],
       description: params[:description]
     })
 
-    task.save
-    redirect_to task_path(task)
+    @task.save
+    redirect_to task_path(@task)
   end
   
+  def destroy
+    @deleted_task = Task.find(params[:id])
+    @deleted_task.destroy
+
+    redirect_to tasks_path
+  end
 end
