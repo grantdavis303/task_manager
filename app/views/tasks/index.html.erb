@@ -3,7 +3,8 @@
 <section class="all_task_list">
   <ul>
     <% @tasks.each do |task| %>
-      <li><p> <%= task %> </p></li>
+      <li><h3> <%= link_to task.title, task_path(task), method: :get %> </h3></li>
+      <p> <%= task.description %> </p>
     <% end %>
   </ul>
 </section>
