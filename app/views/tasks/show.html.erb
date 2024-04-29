@@ -5,3 +5,4 @@
 <p> <%= @task.description %> </p>
 
 <p> <%= link_to "Update Task", edit_task_path(@task), method: :get %> </p>
+<p> <%= button_to "Delete Task", task_path(@task), method: :delete %></p>
