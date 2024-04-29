@@ -3,3 +3,5 @@
 <p> <%= link_to "Task Index", tasks_path, method: :get %> </p>
 
 <p> <%= @task.description %> </p>
+
+<p> <%= link_to "Update Task", edit_task_path(@task), method: :get %> </p>
