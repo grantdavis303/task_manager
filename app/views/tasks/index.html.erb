@@ -1,0 +1,9 @@
+<h1> Tasks Index </h1>
+
+<section class="all_task_list">
+  <ul>
+    <% @tasks.each do |task| %>
+      <li><p> <%= task %> </p></li>
+    <% end %>
+  </ul>
+</section>
